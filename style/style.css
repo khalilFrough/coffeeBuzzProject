@@ -1,0 +1,106 @@
+/* declearing some variables  */
+:root {
+  --primary-color: #496afc;
+  --primary-color-light: #6daffa;
+  --primary-color-dark: #051c77;
+  --secondary-color-light: #ffb900;
+  --secondary-color-dark: #ff7730;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-light: #f7f7f7;
+  --color-gray-dark: #777;
+  --color-gray-light-2: #eee;
+
+  /* these are variable for the gride system */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0 0.8rem;
+}
+body {
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-gray-dark);
+}
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right, #496afc, rgba(1, 22, 104, 0.222)),
+    url(/media/img.jpg);
+  background-size: cover;
+  background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative;
+}
+.logo-box {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+}
+.logo {
+  height: 120px;
+  width: 300px;
+}
+.buttons {
+  position: absolute;
+  top: 40px;
+  right: 0px;
+}
+a:link {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+  display: inline-block;
+}
+/* styling the tiles on the page */
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.heading-primary {
+  color: var(--color-white);
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 10px;
+}
+.heading-primary-sub {
+  display: block;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+/* styling the button on the middle of the page */
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+}
+.btn-white {
+  background-color: var(--color-white);
+  color: var(--color-gray-dark);
+}
+.btn:hover {
+  transform: translateY(-3px);
+}
+.btn:active {
+  transform: translateY(0px);
+}
