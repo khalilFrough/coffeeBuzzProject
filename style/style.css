@@ -106,7 +106,8 @@ li {
 }
 .btn-white {
   background-color: var(--color-white);
-  color: var(--color-gray-dark);
+  color: var(--primary-color-dark);
+  font-weight: 700;
 }
 .btn:hover {
   transform: translateY(-3px);
