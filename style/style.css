@@ -29,6 +29,7 @@ html {
   box-sizing: border-box;
   padding: 0 0.8rem;
 }
+
 body {
   font-family: "Dosis", sans-serif;
   font-weight: 400;
@@ -65,7 +66,7 @@ a:link {
 }
 li {
   list-style: none;
-  display: inline-block;
+  /* display: inline-block; */
 }
 /* styling the tiles on the page */
 .text-box {
@@ -153,6 +154,24 @@ li {
 .u-center-text {
   text-align: center;
 }
+main {
+  margin: 0;
+  padding: 0;
+}
+.section-about {
+  background-color: #f7f7f7;
+  padding-top: 15rem;
+  margin-top: -25vh;
+  margin-left: 0;
+}
+/* this class is to give extra maring at the bottom of elements */
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
 
 /* creating the grid system for the cards  */
 .row {
@@ -193,4 +212,38 @@ li {
 }
 .row .col-3-of-4 {
   width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+}
+/* sytling the card starts from here */
+.card {
+  position: relative;
+  height: 35rem;
+}
+.card__side {
+  height: 35rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.8);
+}
+.card__picture {
+  margin-top: 1rem;
+  background-size: cover;
+  height: 23rem;
+  background-blend-mode: screen;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.card__picture--1 {
+  background-image: url(/media/coffee.jpg);
+}
+.card__picture--2 {
+  background-image: url(/media/cake.jpg);
+}
+.card__picture--3 {
+  background-image: url(/media/tea.jpg);
+}
+.card__picture--4 {
+  background-image: url(/media/sandwich.jpg);
 }
