@@ -13,8 +13,8 @@
 
   /* these are variable for the gride system */
   --grid-width: 114rem;
-  --gutter-vertical: 8rem;
-  --gutter-horizontal: 6rem;
+  --gutter-vertical: 6rem;
+  --gutter-horizontal: 2rem;
 }
 
 /* setting the root font size in order to change the px unites in to rem unites */
@@ -180,7 +180,7 @@ main {
 }
 /* this is to remove the extra margin for the bottom of the page */
 .row:not(:last-child) {
-  margin-bottom: 8rem;
+  margin-bottom: var(--gutter-vertical);
 }
 /* this is to clear row */
 .row::after {
@@ -193,33 +193,41 @@ main {
   float: left;
 }
 .row [class^="col-"]:not(:last-child) {
-  margin-right: 6rem;
+  margin-right: var(--gutter-horizontal);
 }
 .row .col-1-of-2 {
-  width: calc((100% - 6rem) / 2);
+  width: calc((100% - var(--gutter-horizontal)) / 2);
 }
 .row .col-1-of-3 {
-  width: calc((100% - 2 * 6rem) / 3);
+  width: calc((100% - 2 * var(--gutter-horizontal)) / 3);
 }
 .row .col-2-of-3 {
-  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+  width: calc(
+    2 * ((100% - 2 * var(--gutter-horizontal)) / 3) + var(--gutter-horizontal)
+  );
 }
 .row .col-1-of-4 {
-  width: calc((100% - 3 * 6rem) / 4);
+  width: calc((100% - 4 * var(--gutter-horizontal)) / 4);
 }
 .row .col-2-of-4 {
-  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+  width: calc(
+    2 * ((100% - 3 * var(--gutter-horizontal)) / 4) + var(--gutter-horizontal)
+  );
 }
 .row .col-3-of-4 {
-  width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+  width: calc(
+    3 * ((100% - 3 * var(--gutter-horizontal)) / 4) + 2 *
+      var(--gutter-horizontal)
+  );
 }
 /* sytling the card starts from here */
 .card {
   position: relative;
-  height: 35rem;
+  height: 45rem;
 }
+/* front side of the card how it looks  */
 .card__side {
-  height: 35rem;
+  height: 45rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -228,13 +236,15 @@ main {
   overflow: hidden;
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.8);
 }
+/* card setting of the pictures */
 .card__picture {
   margin-top: 1rem;
   background-size: cover;
-  height: 23rem;
+  height: 25rem;
   background-blend-mode: screen;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
+/* card pictures to change */
 .card__picture--1 {
   background-image: url(/media/coffee.jpg);
 }
@@ -246,4 +256,40 @@ main {
 }
 .card__picture--4 {
   background-image: url(/media/sandwich.jpg);
+}
+
+.card__heading {
+  font-size: 2.5rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  position: absolute;
+  color: var(--color-white);
+  top: 22rem;
+  right: 1rem;
+  width: 70%;
+  border-radius: 3px;
+  background-color: var(--primary-color);
+  text-align: center;
+}
+
+.card__heading-span {
+  padding: 5rem 1.5rem;
+  box-decoration-break: clone;
+}
+/* styling the card detials */
+.card__details {
+  padding: 0rem;
+}
+.card__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+.card__details li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid var(--color-gray-dark);
 }
