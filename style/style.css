@@ -17,6 +17,12 @@
   --gutter-horizontal: 6rem;
 }
 
+/* setting the root font size in order to change the px unites in to rem unites */
+html {
+  /* 1rem unit = 16px I used 10 px for for most of the items used in this documents for 
+  for that reson I had to convert the px to rem by diving 10/10=.625% */
+  font-size: 62.5%;
+}
 * {
   padding: 0;
   margin: 0;
@@ -26,7 +32,7 @@
 body {
   font-family: "Dosis", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: var(--color-gray-dark);
 }
@@ -43,15 +49,15 @@ body {
 .logo-box {
   position: absolute;
   top: 0px;
-  left: 20px;
+  left: 2rem;
 }
 .logo {
-  height: 120px;
-  width: 300px;
+  height: 12rem;
+  width: 30rem;
 }
 .buttons {
   position: absolute;
-  top: 40px;
+  top: 4rem;
   right: 0px;
 }
 a:link {
@@ -72,29 +78,29 @@ li {
 .heading-primary {
   color: var(--color-white);
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
 }
 .heading-primary-main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 600;
-  letter-spacing: 10px;
+  letter-spacing: 1rem;
 }
 .heading-primary-sub {
   display: block;
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 500;
-  letter-spacing: 5px;
+  letter-spacing: 0.5rem;
 }
 /* styling the button on the middle of the page */
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 2rem;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 50px;
+  border-radius: 5rem;
   transition: all 0.2s ease;
 }
 .btn-white {
@@ -111,24 +117,28 @@ li {
 
 .btn-text:link,
 .btn-text:visited {
-  font-size: 16px;
-  color: var (var(--primary-color));
+  font-size: 1.6rem;
   display: inline-block;
   text-decoration: none;
   border-bottom: 1px solid var(--primary-color);
-  padding: 3px;
+  padding: 0 1rem;
+  border: 1px solid var(--color-black);
+  border-radius: 2rem;
+  background-color: var(--color-gray-light);
   transition: all 0.2s;
+  color: var(--primary-color-dark);
+  font-weight: 700;
 }
 
 .btn-text:hover {
   background-color: var(--primary-color);
   color: var(--color-white);
-  box-shadow: 0 10px 20px rgba(var(--color-black), 0.15);
+  box-shadow: 0 10px 2rem rgba(var(--color-black), 0.15);
 }
 
 /* this is to format the heading which is below the picture */
 .heading-secondary {
-  font-size: 30px;
+  font-size: 3rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
