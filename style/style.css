@@ -175,7 +175,7 @@ main {
 
 /* creating the grid system for the cards  */
 .row {
-  max-width: 114rem;
+  max-width: var(--grid-width);
   margin: 0 auto;
 }
 /* this is to remove the extra margin for the bottom of the page */
@@ -240,7 +240,7 @@ main {
 .card__picture {
   margin-top: 1rem;
   background-size: cover;
-  height: 25rem;
+  height: 22rem;
   background-blend-mode: screen;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
@@ -264,7 +264,7 @@ main {
   text-transform: uppercase;
   position: absolute;
   color: var(--color-white);
-  top: 22rem;
+  top: 19.5rem;
   right: 1rem;
   width: 70%;
   border-radius: 3px;
