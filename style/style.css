@@ -223,11 +223,11 @@ main {
 /* sytling the card starts from here */
 .card {
   position: relative;
-  height: 45rem;
+  height: 43rem;
 }
 /* front side of the card how it looks  */
 .card__side {
-  height: 45rem;
+  height: 43rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -292,4 +292,26 @@ main {
 }
 .card__details ul li:not(:last-child) {
   border-bottom: 1px solid var(--color-gray-dark);
+}
+.card:hover {
+  transform: translateY(-1.5rem) scale(1.03);
+  transition: all 2s ease;
+}
+/* styling the footer section */
+footer {
+  background-color: var(--color-black);
+  height: 10rem;
+  color: var(--color-white);
+  text-align: center;
+}
+.social-media {
+  text-align: left;
+  font-size: 1.8rem;
+  padding-top: 4rem;
+  text-transform: uppercase;
+}
+.contact {
+  text-align: right;
+  font-size: 1.8rem;
+  text-transform: uppercase;
 }
