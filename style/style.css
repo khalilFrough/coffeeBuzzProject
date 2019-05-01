@@ -389,6 +389,7 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 3px;
+  text-align: center;
 }
 .signin__popup:target {
   opacity: 1;
