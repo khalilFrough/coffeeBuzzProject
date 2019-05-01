@@ -426,6 +426,7 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 3px;
+  text-align: center;
 }
 .admin__popup:target {
   opacity: 1;
@@ -463,6 +464,7 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 3px;
+  text-align: center;
 }
 .staff__popup:target {
   opacity: 1;
