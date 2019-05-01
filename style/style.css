@@ -1,6 +1,6 @@
 /* declearing some variables  */
 :root {
-  --primary-color: #496afc;
+  --primary-color: #3382e9;
   --primary-color-light: #6daffa;
   --primary-color-dark: #051c77;
   --secondary-color-light: #ffb900;
@@ -20,7 +20,7 @@
 /* setting the root font size in order to change the px unites in to rem unites */
 html {
   /* 1rem unit = 16px I used 10 px for for most of the items used in this documents for 
-  for that reson I had to convert the px to rem by diving 10/10=.625% */
+  for that reson I had to convert the px to rem by diving 10/16=.625% */
   font-size: 62.5%;
 }
 * {
@@ -39,7 +39,11 @@ body {
 }
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right, #496afc, rgba(1, 22, 104, 0.222)),
+  background-image: linear-gradient(
+      to right bottom,
+      var(--primary-color),
+      rgba(1, 22, 104, 0.22)
+    ),
     url(/media/img.jpg);
   background-size: cover;
   background-position: top;
