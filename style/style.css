@@ -332,7 +332,7 @@ footer {
 .register__popup__content {
   width: 60%;
   height: 50%;
-  background-color: white;
+  background-color: var(--color-white);
   position: relative;
   top: 50%;
   left: 50%;
@@ -369,7 +369,7 @@ footer {
 .signin__popup__content {
   width: 60%;
   height: 50%;
-  background-color: white;
+  background-color: var(--color-white);
   position: relative;
   top: 50%;
   left: 50%;
@@ -405,7 +405,7 @@ footer {
 .admin__popup__content {
   width: 60%;
   height: 50%;
-  background-color: white;
+  background-color: var(--color-white);
   position: relative;
   top: 50%;
   left: 50%;
@@ -442,7 +442,7 @@ footer {
 .staff__popup__content {
   width: 60%;
   height: 50%;
-  background-color: white;
+  background-color: var(--color-white);
   position: relative;
   top: 50%;
   left: 50%;
