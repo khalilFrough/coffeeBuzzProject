@@ -316,7 +316,7 @@ footer {
   font-size: 1.8rem;
   text-transform: uppercase;
 }
-/* styling the pop up  */
+/* styling the registration pop up  */
 .register__popup {
   height: 100vh;
   width: 100%;
@@ -327,15 +327,17 @@ footer {
   left: 0;
   opacity: 0;
   visibility: hidden;
+  transition: all 0.3s;
 }
 .register__popup__content {
   width: 60%;
-  height: 40%;
+  height: 50%;
   background-color: white;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 3px;
 }
 .register__popup:target {
   opacity: 1;
@@ -343,6 +345,116 @@ footer {
 }
 
 .register__popup_close {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+}
+
+/* styling the sign in pop up  */
+.signin__popup {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 400;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.signin__popup__content {
+  width: 60%;
+  height: 50%;
+  background-color: white;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+}
+.signin__popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.signin__popup_close {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+}
+/* styling the Admin  pop up  */
+.admin__popup {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 400;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.admin__popup__content {
+  width: 60%;
+  height: 50%;
+  background-color: white;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+}
+.admin__popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.admin__popup_close {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+}
+
+/* styling the staff pop up  */
+.staff__popup {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 400;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.staff__popup__content {
+  width: 60%;
+  height: 50%;
+  background-color: white;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+}
+.staff__popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.staff__popup_close {
   position: absolute;
   top: 0;
   right: 3rem;

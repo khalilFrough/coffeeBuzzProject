@@ -28,9 +28,9 @@
       <!-- the buttons on the main page starts here -->
       <div class="buttons">
         <a class="btn btn-text" href="#register__popup">Sign Up</a>
-        <a class="btn btn-text" href="#">Sign In</a>
-        <a href="#">Admin</a>
-        <a href="#">Staff</a>
+        <a class="btn btn-text" href="#signin__popup">Sign In</a>
+        <a href="#admin__popup">Admin</a>
+        <a href="#staff__popup">Staff</a>
       </div>
       <!-- the button on the main page finishes here -->
       <!-- the text in the center of the page starts here -->
@@ -39,7 +39,7 @@
           <span class="heading-primary-main">Welcome to CofeeBuzz Cafe</span>
           <span class="heading-primary-sub">Taste the Real Coffee</span>
         </h1>
-        <a href="#" class="btn btn-white">Sign Up Now</a>
+        <a href="#register__popup" class="btn btn-white">Sign Up Now</a>
       </div>
       <!-- the page in the center finishes here -->
     </header>
@@ -180,16 +180,33 @@
 
       <div class="register__popup" id="register__popup">
         <div class="register__popup__content">
-          <div class="popup__right">
-            the form goes here
-            <a href="#header" class="register__popup_close">&times;</a>
-          </div>
-
-          <div class="popup__left">
-            the left part of the form
-          </div>
+          <a href="#header" class="register__popup_close">&times;</a>
         </div>
       </div>
+
+      <!-- the sing in pop up starts from here -->
+      <div class="signin__popup" id="signin__popup">
+        <div class="signin__popup__content">
+          <a href="#signin" class="signin__popup_close">&times;</a>
+        </div>
+      </div>
+      <!-- the sing in pop up finishes from here -->
+
+      <!-- the admin pop up starts here -->
+      <div class="admin__popup" id="admin__popup">
+        <div class="admin__popup__content">
+          <a href="#admin" class="admin__popup_close">&times;</a>
+        </div>
+      </div>
+      <!-- the admin pop up finishes here -->
+
+      <!-- the staff pop up starts here -->
+      <div class="staff__popup" id="staff__popup">
+        <div class="staff__popup__content">
+          <a href="#staff" class="staff__popup_close">&times;</a>
+        </div>
+      </div>
+      <!-- the staff pop up finishes here -->
 
       <!-- the pop up section finishes here -->
 
