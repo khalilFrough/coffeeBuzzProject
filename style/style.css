@@ -113,6 +113,20 @@ li {
   color: var(--primary-color-dark);
   font-weight: 700;
 }
+
+.btn-white-small {
+  background-color: var(--color-white);
+  color: var(--primary-color-dark);
+  font-weight: 500;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  float: right;
+  position: absolute;
+  top: 3rem;
+  right: 4rem;
+}
 .btn:hover {
   transform: translateY(-3px);
 }
@@ -518,4 +532,17 @@ footer {
 }
 .form__label {
   display: none;
+}
+
+/* styling the customer view page starts from here */
+.customer__header {
+  position: relative;
+  background-image: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--primary-color-light)
+  );
+  height: 10rem;
+  width: 100%;
+  color: var(--color-white);
 }
