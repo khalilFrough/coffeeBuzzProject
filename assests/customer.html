@@ -20,111 +20,140 @@
     </header>
 
     <main>
-      <div class="u-center-text umargin-bottom-big">
-        <h2 class="heading-secondary u-margin-bottom-medium">
-          Customer Menu Page
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-1-of-2">
-          <div class="card">
-            <div class="card__side card__side--front">
-              <div class="card__picture card__picture--1">
-                &nbsp;
+      <div class="container">
+        <div class="u-center-text umargin-bottom-big">
+          <h2 class="heading-secondary u-margin-bottom-medium">
+            Customer Menu Page
+          </h2>
+        </div>
+        <div class="row">
+          <!-- card 1 Coffee order -->
+          <div class="col-1-of-2">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--1">
+                  &nbsp;
+                </div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card_heading--span--1"
+                    >Coffee</span
+                  >
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>Espresson</li>
+                    <li>Latte</li>
+                    <li>Cappuccino</li>
+                    <li>Long Black</li>
+                  </ul>
+                </div>
               </div>
-              <h4 class="card__heading">
-                <span class="card__heading-span card_heading--span--1"
-                  >Coffee</span
-                >
-              </h4>
-              <div class="card__details">
-                <ul>
-                  <li>Espresson</li>
-                  <li>Latte</li>
-                  <li>Cappuccino</li>
-                  <li>Long Black</li>
-                </ul>
+            </div>
+            <!-- option part starts from here -->
+            <div class="option__part">
+              <label for="coffee__order">Please Select your Coffee:</label>
+              <select name="cofee" id="coffee__order">
+                <option value="Espresso"></option>
+                <option value="HotCoffee">Hot Coffee</option>
+                <option value="Espresso ">Espresso</option>
+                <option value="doulbe_Espresso">Double Espresso</option>
+                <option value="Cappuccino">Cappuccino</option>
+                <option value="long_black">long black</option>
+                <option value="hot_chocolate ">Hot Chocolate </option>
+              </select>
+              <!-- selecting the size -->
+              <label for="coffee__order">Which Size Coffee:</label>
+              <select name="size" id="coffee__size">
+                <option value=""></option>
+                <option value="small">Small</option>
+                <option value="medium ">Medium</option>
+                <option value="large">Large</option>
+              </select>
+              <p><button class="btn-white">Place Your Order</button></p>
+            </div>
+            <!-- option parts finishes here -->
+          </div>
+          <div class="col-1-of-2">
+            <!-- card 2 cake order -->
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--2">
+                  &nbsp;
+                </div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card_heading--span--2"
+                    >Cake</span
+                  >
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>Cheese Cake</li>
+                    <li>Cholocate Cake</li>
+                    <li>Pineapple Cake</li>
+                    <li>Banana Cake</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-1-of-2">
-          <div class="card">
-            <div class="card__side card__side--front">
-              <div class="card__picture card__picture--2">
-                &nbsp;
-              </div>
-              <h4 class="card__heading">
-                <span class="card__heading-span card_heading--span--2"
-                  >Cake</span
-                >
-              </h4>
-              <div class="card__details">
-                <ul>
-                  <li>Cheese Cake</li>
-                  <li>Cholocate Cake</li>
-                  <li>Pineapple Cake</li>
-                  <li>Banana Cake</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- the second row starts from here -->
+        <!-- the second row starts from here -->
 
-      <div class="row">
-        <div class="col-1-of-2">
-          <div class="card">
-            <div class="card__side card__side--front">
-              <div class="card__picture card__picture--3">
-                &nbsp;
+        <div class="row">
+          <!-- card 3 tea order -->
+          <div class="col-1-of-2">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--3">
+                  &nbsp;
+                </div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card_heading--span--3"
+                    >Tea</span
+                  >
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>Earl Grey</li>
+                    <li>Assam</li>
+                    <li>Green</li>
+                    <li>Mint</li>
+                  </ul>
+                </div>
               </div>
-              <h4 class="card__heading">
-                <span class="card__heading-span card_heading--span--3"
-                  >Tea</span
-                >
-              </h4>
-              <div class="card__details">
-                <ul>
-                  <li>Earl Grey</li>
-                  <li>Assam</li>
-                  <li>Green</li>
-                  <li>Mint</li>
-                </ul>
+            </div>
+          </div>
+          <div class="col-1-of-2">
+            <!-- card 4 sandwitch order -->
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--4">
+                  &nbsp;
+                </div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card_heading--span--4"
+                    >Sandwich</span
+                  >
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>Bacon Sandwich</li>
+                    <li>Beef Sandwich</li>
+                    <li>Cheese Sandwich</li>
+                    <li>Tuna Sandwich</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-1-of-2">
-          <div class="card">
-            <div class="card__side card__side--front">
-              <div class="card__picture card__picture--4">
-                &nbsp;
-              </div>
-              <h4 class="card__heading">
-                <span class="card__heading-span card_heading--span--4"
-                  >Sandwich</span
-                >
-              </h4>
-              <div class="card__details">
-                <ul>
-                  <li>Bacon Sandwich</li>
-                  <li>Beef Sandwich</li>
-                  <li>Cheese Sandwich</li>
-                  <li>Tuna Sandwich</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="u-center-text umargin-bottom-big">
-        <h2 class="heading-secondary u-margin-bottom-medium">
-          please place your order
-        </h2>
+        <div class="u-center-text umargin-bottom-big">
+          <h2 class="heading-secondary u-margin-bottom-medium">
+            please place your order
+          </h2>
+        </div>
       </div>
     </main>
 

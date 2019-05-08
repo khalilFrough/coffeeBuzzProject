@@ -546,3 +546,11 @@ footer {
   width: 100%;
   color: var(--color-white);
 }
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+.option__part {
+  margin: 4rem 0;
+  text-align: center;
+}
