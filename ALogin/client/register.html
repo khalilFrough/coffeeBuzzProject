@@ -1,0 +1,25 @@
+<html>
+<body>
+
+<h2>Register</h2>
+
+<form action="../server/register.php" method="POST">
+
+Enter Username: <input type="text" name="user" id="user">
+<br/><br/>
+Enter Password: <input type="password" name="input" id="input">
+<br/><br/>
+
+<button type="submit" onclick="hash()">Submit</button>
+</form>
+
+<script src="js/sha256.js"></script>
+<script type="text/javascript">
+		function hash() {
+			var input = document.getElementById('input').value;
+			var hash = SHA256.hash(input);			
+			document.getElementById("input").value = hash;
+		}
+</script>
+</body>
+</html>
