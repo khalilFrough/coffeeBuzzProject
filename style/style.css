@@ -44,7 +44,7 @@ body {
       var(--primary-color),
       rgba(1, 22, 104, 0.22)
     ),
-    url(/media/img.jpg);
+    url(../media/img.jpg);
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
@@ -278,16 +278,16 @@ main {
 }
 /* card pictures to change */
 .card__picture--1 {
-  background-image: url(/media/coffee.jpg);
+  background-image: url(../media/coffee.jpg);
 }
 .card__picture--2 {
-  background-image: url(/media/cake.jpg);
+  background-image: url(../media/cake.jpg);
 }
 .card__picture--3 {
-  background-image: url(/media/tea.jpg);
+  background-image: url(../media/tea.jpg);
 }
 .card__picture--4 {
-  background-image: url(/media/sandwich.jpg);
+  background-image: url(../media/sandwich.jpg);
 }
 
 .card__heading {

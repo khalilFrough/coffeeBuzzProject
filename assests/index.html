@@ -14,14 +14,14 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="../style/style.css" />
     <title>CoffeeBuzz</title>
   </head>
   <body>
     <header class="header" id="header">
       <!-- logo starts here -->
       <div class="logo-box">
-        <img class="logo" src="/media/logo.png" alt="logo goes here" />
+        <img class="logo" src="../media/logo.png" alt="logo goes here" />
       </div>
       <!-- logo finishes here -->
 
@@ -176,228 +176,235 @@
         </div>
       </footer>
 
-      <!-- the pop up sections starts from here -->
+<!-- the pop up sections starts from here -->
 
-      <div class="register__popup" id="register__popup">
-        <div class="register__popup__content">
-          <a href="#header" class="register__popup_close">&times;</a>
+<div class="register__popup" id="register__popup">
+    <div class="register__popup__content">
+      <a href="#header" class="register__popup_close">&times;</a>
 
-          <div class="register__form">
-            <form action="#" class="form">
-              <!-- form heading -->
-              <div class="u-margin-bottom-medium">
-                <h2 class="heading-secondary">
-                  Please Register Here
-                </h2>
-              </div>
-              <div class="form__group">
-                <input
-                  type="text"
-                  class="form__input"
-                  placeholder="Full Name"
-                  id="full-Name"
-                  required
-                />
-                <label for="full-Name" class="form__label">Full Name</label>
-              </div>
-              <div class="form__group">
-                <input
-                  type="email"
-                  class="form__input"
-                  placeholder="Email"
-                  id="email"
-                  required
-                />
-                <label for="email" class="form__label">Email</label>
-              </div>
-              <div class="form__group">
-                <input
-                  type="email"
-                  class="form__input"
-                  placeholder="Confirm Email"
-                  id="confirm-email"
-                  required
-                />
-                <label for="confirm-email" class="form__label"
-                  >Confirm Email</label
-                >
-              </div>
-
-              <div class="form__group">
-                <input
-                  type="password"
-                  class="form__input"
-                  placeholder="Password"
-                  id="password"
-                  required
-                />
-                <label for="password" class="form__label">Password</label>
-              </div>
-
-              <div class="form__group">
-                <input
-                  type="password"
-                  class="form__input"
-                  placeholder="Confirm Password"
-                  id="confirm-password"
-                  required
-                />
-                <label for="confirm-password" class="form__label"
-                  >Confirm password</label
-                >
-              </div>
-
-              <div class="form__group">
-                <button class="btn--blue">Register &rarr;</button>
-              </div>
-            </form>
+      <div class="register__form">
+        <form action="addCustomer.php" class="form" method="post">
+          <!-- form heading -->
+          <div class="u-margin-bottom-medium">
+            <h2 class="heading-secondary">
+              Please Register Here
+            </h2>
           </div>
-        </div>
-      </div>
-
-      <!-- the sing in pop up starts from here -->
-      <div class="signin__popup" id="signin__popup">
-        <div class="signin__popup__content">
-          <!-- the form starts here -->
-
-          <div class="register__form">
-            <form action="#" class="form">
-              <!-- form heading -->
-              <div class="u-margin-bottom-medium">
-                <h2 class="heading-secondary">
-                  Users Sign in page
-                </h2>
-              </div>
-
-              <div class="form__group">
-                <input
-                  type="email"
-                  class="form__input"
-                  placeholder="Email"
-                  id="user-email"
-                  required
-                />
-                <label for="user-email" class="form__label">Email</label>
-              </div>
-
-              <div class="form__group">
-                <input
-                  type="password"
-                  class="form__input"
-                  placeholder="Password"
-                  id="user-password"
-                  required
-                />
-                <label for="user-password" class="form__label">Password</label>
-              </div>
-
-              <div class="form__group">
-                <button class="btn--blue">Sign In &rarr;</button>
-              </div>
-            </form>
+          <div class="form__group">
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Full Name"
+              id="full-Name"
+              name="fullname"
+              required
+            />
+            <label for="full-Name" class="form__label">Full Name</label>
+          </div>
+          <div class="form__group">
+            <input
+              type="email"
+              class="form__input"
+              placeholder="Email"
+              id="email"
+              name="email"
+              required
+            />
+            <label for="email" class="form__label">Email</label>
+          </div>
+          <div class="form__group">
+            <input
+              type="email"
+              class="form__input"
+              placeholder="Confirm Email"
+              id="confirm-email"
+              name="con_email"
+              required
+            />
+            <label for="confirm-email" class="form__label"
+              >Confirm Email</label
+            >
           </div>
 
-          <!-- the form finishes here -->
-
-          <a href="#signin" class="signin__popup_close">&times;</a>
-        </div>
-      </div>
-      <!-- the sing in pop up finishes from here -->
-
-      <!-- the admin pop up starts here -->
-      <div class="admin__popup" id="admin__popup">
-        <div class="admin__popup__content">
-          <!-- the admin login form starts here -->
-          <div class="register__form">
-            <form action="#" class="form">
-              <!-- form heading -->
-              <div class="u-margin-bottom-medium">
-                <h2 class="heading-secondary">
-                  Admin Log in Page
-                </h2>
-              </div>
-
-              <div class="form__group">
-                <input
-                  type="text"
-                  class="form__input"
-                  placeholder="User Name"
-                  id="admin-username"
-                  required
-                />
-                <label for="admin-username" class="form__label"
-                  >User Name</label
-                >
-              </div>
-
-              <div class="form__group">
-                <input
-                  type="password"
-                  class="form__input"
-                  placeholder="Password"
-                  id="admin-password"
-                  required
-                />
-                <label for="password" class="form__label">Password</label>
-              </div>
-
-              <div class="form__group">
-                <button class="btn--blue">Log In &rarr;</button>
-              </div>
-            </form>
+          <div class="form__group">
+            <input
+              type="password"
+              class="form__input"
+              placeholder="Password"
+              id="password"
+              name="pword"
+              required
+            />
+            <label for="password" class="form__label">Password</label>
           </div>
-          <!-- the admin login form finishes here -->
-          <a href="#admin" class="admin__popup_close">&times;</a>
-        </div>
-      </div>
-      <!-- the admin pop up finishes here -->
 
-      <!-- the staff pop up starts here -->
-      <div class="staff__popup" id="staff__popup">
-        <div class="staff__popup__content">
-          <!-- the staff login form starts here  -->
-          <div class="register__form">
-            <form action="#" class="form">
-              <!-- form heading -->
-              <div class="u-margin-bottom-medium">
-                <h2 class="heading-secondary">
-                  Staff Log in Page
-                </h2>
-              </div>
-
-              <div class="form__group">
-                <input
-                  type="text"
-                  class="form__input"
-                  placeholder="User Name"
-                  id="staff-username"
-                  required
-                />
-                <label for="staff-username" class="form__label"
-                  >User Name</label
-                >
-              </div>
-
-              <div class="form__group">
-                <input
-                  type="password"
-                  class="form__input"
-                  placeholder="Password"
-                  id="staff-password"
-                  required
-                />
-                <label for="password" class="form__label">Password</label>
-              </div>
-
-              <div class="form__group">
-                <button class="btn--blue">Log In &rarr;</button>
-              </div>
-            </form>
+          <div class="form__group">
+            <input
+              type="password"
+              class="form__input"
+              placeholder="Confirm Password"
+              id="confirm-password"
+              name="con_pword"
+              required
+            />
+            <label for="confirm-password" class="form__label"
+              >Confirm password</label
+            >
           </div>
-          <!-- the staff login form finishes here -->
-          <a href="#staff" class="staff__popup_close">&times;</a>
-        </div>
+
+          <div class="form__group">
+              <input class="btn--blue" type="submit" value = "Register &rarr;">
+          </div>
+        </form>
       </div>
+    </div>
+  </div>
+
+  <!-- the sing in pop up starts from here -->
+  <div class="signin__popup" id="signin__popup">
+    <div class="signin__popup__content">
+      <!-- the form starts here -->
+
+      <div class="register__form">
+        <form action="getCustomer.php" class="form" method="post">
+          <!-- form heading -->
+          <div class="u-margin-bottom-medium">
+            <h2 class="heading-secondary">
+              Users Sign in page
+            </h2>
+          </div>
+
+          <div class="form__group">
+            <input
+              type="email"
+              class="form__input"
+              placeholder="Email"
+              id="user-email"
+              name="email"
+              required
+            />
+            <label for="user-email" class="form__label">Email</label>
+          </div>
+
+          <div class="form__group">
+            <input
+              type="password"
+              class="form__input"
+              placeholder="Password"
+              id="user-password"
+              name="pword"
+              required
+            />
+            <label for="user-password" class="form__label">Password</label>
+          </div>
+
+          <div class="form__group">
+              <input class="btn--blue" type="submit" value = "Sign In &rarr;">
+          </div>
+        </form>
+      </div>
+
+      <!-- the form finishes here -->
+
+      <a href="#signin" class="signin__popup_close">&times;</a>
+    </div>
+  </div>
+  <!-- the sing in pop up finishes from here -->
+
+  <!-- the admin pop up starts here -->
+  <div class="admin__popup" id="admin__popup">
+    <div class="admin__popup__content">
+      <!-- the admin login form starts here -->
+      <div class="register__form">
+        <form action="#" class="form">
+          <!-- form heading -->
+          <div class="u-margin-bottom-medium">
+            <h2 class="heading-secondary">
+              Admin Log in Page
+            </h2>
+          </div>
+
+          <div class="form__group">
+            <input
+              type="text"
+              class="form__input"
+              placeholder="User Name"
+              id="admin-username"
+              required
+            />
+            <label for="admin-username" class="form__label"
+              >User Name</label
+            >
+          </div>
+
+          <div class="form__group">
+            <input
+              type="password"
+              class="form__input"
+              placeholder="Password"
+              id="admin-password"
+              required
+            />
+            <label for="password" class="form__label">Password</label>
+          </div>
+
+          <div class="form__group">
+              <input class="btn--blue" type="submit" value = "Log In &rarr;">
+          </div>
+        </form>
+      </div>
+      <!-- the admin login form finishes here -->
+      <a href="#admin" class="admin__popup_close">&times;</a>
+    </div>
+  </div>
+  <!-- the admin pop up finishes here -->
+
+  <!-- the staff pop up starts here -->
+  <div class="staff__popup" id="staff__popup">
+    <div class="staff__popup__content">
+      <!-- the staff login form starts here  -->
+      <div class="register__form">
+        <form action="#" class="form">
+          <!-- form heading -->
+          <div class="u-margin-bottom-medium">
+            <h2 class="heading-secondary">
+              Staff Log in Page
+            </h2>
+          </div>
+
+          <div class="form__group">
+            <input
+              type="text"
+              class="form__input"
+              placeholder="User Name"
+              id="staff-username"
+              required
+            />
+            <label for="staff-username" class="form__label"
+              >User Name</label
+            >
+          </div>
+
+          <div class="form__group">
+            <input
+              type="password"
+              class="form__input"
+              placeholder="Password"
+              id="staff-password"
+              required
+            />
+            <label for="password" class="form__label">Password</label>
+          </div>
+
+          <div class="form__group">
+              <input class="btn--blue" type="submit" value = "Log In &rarr;">
+          </div>
+        </form>
+      </div>
+      <!-- the staff login form finishes here -->
+      <a href="#staff" class="staff__popup_close">&times;</a>
+    </div>
+  </div>
       <!-- the staff pop up finishes here -->
 
       <!-- the pop up section finishes here -->
