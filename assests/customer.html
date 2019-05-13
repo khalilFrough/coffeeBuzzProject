@@ -52,7 +52,12 @@
             <!-- option part starts from here -->
             <div class="option__part">
               <label for="coffee__order">Please Select your Coffee:</label>
-              <select name="cofee" id="coffee__order" onchange="changeOption()">
+              <select
+                class="select__option"
+                name="cofee"
+                id="coffee__order"
+                onchange="changeOption()"
+              >
                 <option value=""></option>
                 <option value="HotCoffee">Hot Coffee</option>
                 <option value="Espresso">Espresso</option>
@@ -62,9 +67,20 @@
                 <option value="hot_chocolate">Hot Chocolate </option>
               </select>
               <!-- selecting the size -->
-              <label for="coffee__order">Which Size Coffee:</label>
-              <select name="size" id="coffee__size">
+              <label for="coffee__size">Which Size Coffee:</label>
+              <select class="select__option" name="size" id="coffee__size">
                 <!-- minipuliting this selection option through javaScript -->
+              </select>
+              <br />
+              <label for="quantity">Please Select the Quantitiy:</label>
+              <select class="select__option" name="quantity" id="quantity">
+                <option value=""></option>
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
+                <option value="six">6</option>
               </select>
               <p><button class="btn-white">Place Your Order</button></p>
             </div>
