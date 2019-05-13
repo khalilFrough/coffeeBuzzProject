@@ -52,22 +52,19 @@
             <!-- option part starts from here -->
             <div class="option__part">
               <label for="coffee__order">Please Select your Coffee:</label>
-              <select name="cofee" id="coffee__order">
-                <option value="Espresso"></option>
+              <select name="cofee" id="coffee__order" onchange="changeOption()">
+                <option value=""></option>
                 <option value="HotCoffee">Hot Coffee</option>
-                <option value="Espresso ">Espresso</option>
+                <option value="Espresso">Espresso</option>
                 <option value="doulbe_Espresso">Double Espresso</option>
                 <option value="Cappuccino">Cappuccino</option>
                 <option value="long_black">long black</option>
-                <option value="hot_chocolate ">Hot Chocolate </option>
+                <option value="hot_chocolate">Hot Chocolate </option>
               </select>
               <!-- selecting the size -->
               <label for="coffee__order">Which Size Coffee:</label>
               <select name="size" id="coffee__size">
-                <option value=""></option>
-                <option value="small">Small</option>
-                <option value="medium ">Medium</option>
-                <option value="large">Large</option>
+                <!-- minipuliting this selection option through javaScript -->
               </select>
               <p><button class="btn-white">Place Your Order</button></p>
             </div>
@@ -176,5 +173,6 @@
         </div>
       </div>
     </footer>
+    <script src="../js/main.js"></script>
   </body>
 </html>
