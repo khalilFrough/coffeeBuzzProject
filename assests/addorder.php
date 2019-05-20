@@ -16,9 +16,10 @@
    }
 
    $sql =<<<EOF
-   SELECT * FROM CUSTOMERS;
+   SELECT * FROM ORDERS;
 EOF;
-//established connection and retireved the customer table for examination before insertion
+$Customer_id = $_SESSION['Customer_id'];
+//established connection and retireved the order table for examination before insertion
 $lastid = 0;
 $ret = $db->query($sql);
 //examin row array
@@ -26,16 +27,12 @@ while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
     $lastid = $lastid + 1;
 }
 $lastid = $lastid + 1;// generate unique id
-$testPword = hash('tiger192,3',$_POST["pword"]);//encrypt password using a hash
-$user = $_POST["fullname"];
-$email = $_POST["email"];
-$date = date("dmY");//get the date for rocord purposes date month year format
-
+$order = $_POST["coffee"];
+$size = $_POST["size"];
+$quantity = $_POST["quantity"];
 $sql =<<<EOF
-   INSERT INTO ORDERS (id, name, pword,cDate,email) VALUES ('$lastid','$user','$testPword','$date',"queued");
+   INSERT INTO ORDERS (ID, item, size, quantity, Customer_ID, status) VALUES ('$lastid','$order','$size','$quantity','$Customer_id','queued');
 EOF;
-
-$ret = $db->query($sql);
 //-------------------------
 $sql =<<<EOF
    SELECT * FROM ORDERS WHERE status = "queued";
@@ -47,7 +44,7 @@ while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
 }
 $_SESSION['Queued'] = $orders;
 //------------------------
+$ret = $db->query($sql);
 $db->close();
-$_SESSION['Customer'] = $user;
-echo "Customer $user Added Successfully";
+header("Location:customer.php");
 ?>
