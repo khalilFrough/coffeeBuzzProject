@@ -30,20 +30,10 @@ $lastid = $lastid + 1;// generate unique id
 $order = $_POST["coffee"];
 $size = $_POST["size"];
 $quantity = $_POST["quantity"];
+$user = $_SESSION['Customer'];
 $sql =<<<EOF
-   INSERT INTO ORDERS (ID, item, size, quantity, Customer_ID, status) VALUES ('$lastid','$order','$size','$quantity','$Customer_id','queued');
+   INSERT INTO ORDERS (ID, item, size, quantity, Customer_ID, status, customer) VALUES ($lastid,'$order','$size','$quantity',$Customer_id,'queued','$user');
 EOF;
-//-------------------------
-$sql =<<<EOF
-   SELECT * FROM ORDERS WHERE status = "queued";
-EOF;
-$orders = 0;
-$ret = $db->query($sql);
-while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
-    $orders += 1;
-}
-$_SESSION['Queued'] = $orders;
-//------------------------
 $ret = $db->query($sql);
 $db->close();
 header("Location:customer.php");

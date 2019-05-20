@@ -32,22 +32,14 @@ $email = $_POST["email"];
 $date = date("dmY");//get the date for rocord purposes date month year format
 
 $sql =<<<EOF
-   INSERT INTO ORDERS (id, name, pword,cDate,email) VALUES ('$lastid','$user','$testPword','$date',"queued");
+   INSERT INTO ORDERS (id, name, pword,cDate,email) VALUES ('$lastid','$user','$testPword','$date',$email);
 EOF;
 
 $ret = $db->query($sql);
-//-------------------------
-$sql =<<<EOF
-   SELECT * FROM ORDERS WHERE status = "queued";
-EOF;
-$orders = 0;
-$ret = $db->query($sql);
-while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
-    $orders += 1;
-}
-$_SESSION['Queued'] = $orders;
 //------------------------
 $db->close();
 $_SESSION['Customer'] = $user;
+$_SESSION['Customer_id'] = $user_id;
 echo "Customer $user Added Successfully";
+header("Location:customer.php");
 ?>

@@ -2,6 +2,7 @@
 <html lang="en">
 <?php
   session_start();
+  session_destroy();
   ?> 
   <head>
     <meta charset="UTF-8" />

@@ -19,7 +19,7 @@
   <body>
     <header class="customer__header">
       <img class="logo" src="../media/logo.png" alt="Logo goes here" />
-      <button class="btn-white-small">Log Out</button>
+      <button class="btn-white-small"onclick="window.location.href='index.php'">Log Out</button>
     </header>
     <main>
       <div class="container">
@@ -28,8 +28,28 @@
             Customer Menu Page
           </h2>
           <?php
+          class MyDB extends SQLite3
+          {
+             function __construct()
+             {
+                $this->open('coffeebuzz.db');
+             }
+          }
+       
+          $db = new MyDB();
+          if(!$db){
+             echo $db->lastErrorMsg();
+          }
+          //-------------------------
+            $sql ='SELECT * FROM ORDERS WHERE status = "queued"';
+            $orders = 0;
+            $ret = $db->query($sql);
+            while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
+             $orders += 1;
+            }
+          //------------------------
+            $db->close();
             $user = $_SESSION['Customer'];
-            $orders = $_SESSION['Queued'];
             echo("<br>hello $user there are currently $orders orders in the queue");
           ?>
       
