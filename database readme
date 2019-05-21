@@ -1,15 +1,20 @@
 CUSTOMERS table
-
+        --id int : pk for the table, a unique id to identify an account
+        --name text : name of the account owner
+        --pword text : an encrypted copy of an accounts password, for logging in purposes 
+        --cDate text : date the account was made formatted as |ddmmyyyy|
+        --email text : the email of the account owner
 ORDERS table
-CREATE TABLE ORDERS(ID int PRIMARY KEY NOT NULL, Item text NOT NULL, Size text NOT NULL, Quantity text, Customer_ID int, status text, customer text, time text,FOREIGN KEY(Customer_ID) REFERENCES CUSTOMERS(id));
---ID int :  pk for the table, a unique id to identify an ORDER
---Item text : order type, identifies what the customer has ordered
---Size text : the items size
---Quantity text : amount of item ordered
---Customer_ID int : the ID of the customer who ordered, acts as FK for the CUSTOMERS table
---status text : status of the order either |queued|making|done|archived|
---customer text : the name of the customer who ordered
+    create command ->CREATE TABLE ORDERS(ID int PRIMARY KEY NOT NULL, Item text NOT NULL, Size text NOT NULL, Quantity text, Customer_ID int, status text, customer text, time text,FOREIGN KEY(Customer_ID) REFERENCES CUSTOMERS(id));
+        --ID int :  pk for the table, a unique id to identify an ORDER
+        --Item text : order type, identifies what the customer has ordered
+        --Size text : the items size
+        --Quantity text : amount of item ordered
+        --Customer_ID int : the ID of the customer who ordered, acts as FK for the CUSTOMERS table
+        --status text : status of the order either |queued|making|done|archived|
+        --customer text : the name of the customer who ordered
+        --time text : date the item was orderd, purely for record keeping purposes formatted as |ddmmyyyy|
 STAFF table
---staff_id int : pk for the table, a unique id to identify an account
---user_name text : username for logging in and identifying staff accounts
---password text : an encrypted copy of an accounts password, for logging in purposes
+        --staff_id int : pk for the table, a unique id to identify an account
+        --user_name text : username for logging in and identifying staff accounts
+        --password text : an encrypted copy of an accounts password, for logging in purposes
