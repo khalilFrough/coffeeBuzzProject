@@ -19,7 +19,7 @@
   <body>
     <header class="customer__header">
       <img class="logo" src="../media/logo.png" alt="Logo goes here" />
-      <button class="btn-white-small">Log Out</button>
+      <button class="btn-white-small"onclick="window.location.href='index.php'">Log Out</button>
     </header>
     <main>
       <div class="container">

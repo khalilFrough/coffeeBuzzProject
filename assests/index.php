@@ -368,7 +368,7 @@
     <div class="staff__popup__content">
       <!-- the staff login form starts here  -->
       <div class="register__form">
-        <form action="#" class="form">
+        <form action="staffLogin.php" class="form" method="POST">
           <!-- form heading -->
           <div class="u-margin-bottom-medium">
             <h2 class="heading-secondary">
@@ -381,6 +381,7 @@
               type="text"
               class="form__input"
               placeholder="User Name"
+              name="username"
               id="staff-username"
               required
             />
@@ -394,6 +395,7 @@
               type="password"
               class="form__input"
               placeholder="Password"
+              name="pword"
               id="staff-password"
               required
             />
