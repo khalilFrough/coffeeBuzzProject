@@ -19,6 +19,7 @@
   <body>
     <header class="customer__header">
       <img class="logo" src="../media/logo.png" alt="Logo goes here" />
+      <button class = "button" onclick="window.location.href='pastorders.php'">Past Orders</button>
       <button class="btn-white-small"onclick="window.location.href='index.php'">Log Out</button>
     </header>
     <main>
@@ -60,9 +61,9 @@
             }
             $db->close();
             $user = $_SESSION['Customer'];
-            if($pickup_orders==0) {echo("<br>Hello there $user are currently $orders orders in the queue");}
-            elseif($pickup_orders==1) {echo("<br>Hello there $user you have $pickup_orders order ready for pickup");}
-            elseif($pickup_orders>1) {echo("<br>Hello there $user you have $pickup_orders order's ready for pickup");}
+            if($pickup_orders==0) {echo("<br>Hello $user there are currently $orders orders in the queue");}
+            elseif($pickup_orders==1) {echo("<br>Hello $user you have $pickup_orders order ready for pickup");}
+            elseif($pickup_orders>1) {echo("<br>Hello $user you have $pickup_orders order's ready for pickup");}
           ?>
       
         <div class="row">
