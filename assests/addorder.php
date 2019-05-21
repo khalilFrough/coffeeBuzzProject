@@ -31,8 +31,9 @@ $order = $_POST["coffee"];
 $size = $_POST["size"];
 $quantity = $_POST["quantity"];
 $user = $_SESSION['Customer'];
+$date = date("dmY");
 $sql =<<<EOF
-   INSERT INTO ORDERS (ID, item, size, quantity, Customer_ID, status, customer) VALUES ($lastid,'$order','$size','$quantity',$Customer_id,'queued','$user');
+   INSERT INTO ORDERS (ID, item, size, quantity, Customer_ID, status, customer,time) VALUES ($lastid,'$order','$size','$quantity',$Customer_id,'queued','$user',$date);
 EOF;
 $ret = $db->query($sql);
 $db->close();

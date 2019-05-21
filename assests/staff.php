@@ -27,42 +27,57 @@
           <h2 class="heading-secondary u-margin-bottom-medium">
             Staff Order Page
           </h2>
-          <?php
-          class MyDB extends SQLite3
-          {
-             function __construct()
-             {
-                $this->open('coffeebuzz.db');
-             }
-          }
-       
-          $db = new MyDB();
-          if(!$db){
-             echo $db->lastErrorMsg();
-          } 
-          echo("<table><tr>
-          <td>Order</td>
-          <td>Size</td>
-          <td>Quantity</td>
-          <td>Customer</td>
-          </tr>");
-          $sql ='SELECT * FROM ORDERS WHERE status = "queued";';
-          $ret = $db->query($sql);
-          while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
-            $item=$row['Item'];
-            $size=$row['Size'];
-            $Quantity=$row['Quantity'];
-            $customer=$row['customer'];
-
-            echo("<tr>
-            <td>$item</td>
-            <td>$size</td>
-            <td>$Quantity</td>
-            <td>$customer</td>
-            </tr>");
-          }
-          echo("</table>");
-          ?>
+          <div class="row">
+          <div class="card">
+              <div class="card__side card__side--front">
+                      <?php
+                      class MyDB extends SQLite3
+                      {
+                         function __construct()
+                         {
+                            $this->open('coffeebuzz.db');
+                         }
+                      }
+                      
+                      $database = new MyDB();
+                      if(!$database){
+                         echo $database->lastErrorMsg();
+                      }
+                      function maketable($stage,$db,$title){
+                        echo("<h2 class='table_title'>$title</h2>
+                        <form action='changestatus.php' method='POST'><table><tr>
+                        <th>Order</th>
+                        <th>Size</th>
+                        <th>Quantity</th>
+                        <th>Customer</th>
+                        <th>Status</th>
+                        <th></th>
+                        </tr>");
+                        $sql ="SELECT * FROM ORDERS WHERE status = '$stage';";
+                        $ret = $db->query($sql);
+                        while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
+                          $order_id=$row['ID'];
+                          $item=$row['Item'];
+                          $size=$row['Size'];
+                          $Quantity=$row['Quantity'];
+                          $customer=$row['customer'];
+                          $status = $row['status'];
+                          echo("<tr>
+                          <td>$item</td>
+                          <td>$size</td>
+                          <td>$Quantity</td>
+                          <td>$customer</td>
+                          <td>$status</td>
+                          <td><button type='submit' name='order_id' value='$order_id' class ='button'>click me</button></td>
+                          </tr>");
+                        }
+                        echo("</table></form>");
+                      }
+                      maketable("queued",$database,"Ordered");
+                      maketable("making",$database,"Being Made");
+                      maketable("done",$database,"Awaiting Pickup");
+                      ?>
+            </div></div></div>
         </div>
       </div>
     </main>

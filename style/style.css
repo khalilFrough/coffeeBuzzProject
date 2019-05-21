@@ -17,6 +17,7 @@
   --gutter-horizontal: 2rem;
 }
 
+
 /* setting the root font size in order to change the px unites in to rem unites */
 html {
   /* 1rem unit = 16px I used 10 px for for most of the items used in this documents for 
@@ -325,10 +326,10 @@ main {
 .card__details ul li:not(:last-child) {
   border-bottom: 1px solid var(--color-gray-dark);
 }
-.card:hover {
+/*.card:hover {
   transform: translateY(-0.5rem) scale(1.00);
   transition: all 1s ease;
-}
+}*/
 /* styling the footer section */
 footer {
   background-color: var(--color-black);
@@ -556,4 +557,36 @@ footer {
 }
 .select__option {
   width: 12rem;
+}
+
+/* styling the staff view page starts from here */
+table {
+  border:1px solid black;
+  margin-left:auto;
+  margin-right:auto;
+  border-collapse:collapse;
+}
+tr:nth-child(even) {background: #CCC}
+
+.button{
+  background-color: rgb(73, 73, 73);
+  border: 2px solid rgb(73, 73, 73);
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  margin: 2px 2px 2px 2px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
+  margin: 0px 0px 0px 0px;
+}
+.table_title{
+  color: rgb(68, 68, 68);
 }
