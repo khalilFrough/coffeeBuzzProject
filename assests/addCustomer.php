@@ -32,14 +32,14 @@ $email = $_POST["email"];
 $date = date("dmY");//get the date for rocord purposes date month year format
 
 $sql =<<<EOF
-   INSERT INTO ORDERS (id, name, pword,cDate,email) VALUES ('$lastid','$user','$testPword','$date',$email);
+   INSERT INTO CUSTOMERS (id, name, pword,cDate,email) VALUES ('$lastid','$user','$testPword','$date','$email');
 EOF;
-
+echo $sql;
 $ret = $db->query($sql);
 //------------------------
 $db->close();
 $_SESSION['Customer'] = $user;
-$_SESSION['Customer_id'] = $user_id;
+$_SESSION['Customer_id'] = $lastid;
 echo "Customer $user Added Successfully";
 header("Location:customer.php");
 ?>
