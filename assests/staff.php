@@ -68,7 +68,7 @@
                           <td>$Quantity</td>
                           <td>$customer</td>
                           <td>$status</td>
-                          <td><button type='submit' name='order_id' value='$order_id' class ='button'>click me</button></td>
+                          <td><button type='submit' name='order_id' value='$order_id' class ='button'>Next Stage</button></td>
                           </tr>");
                         }
                         echo("</table></form>");

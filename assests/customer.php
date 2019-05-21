@@ -48,9 +48,21 @@
              $orders += 1;
             }
           //------------------------
+            $customer_id = $_SESSION['Customer_id'];
+            $sql ='SELECT * FROM ORDERS WHERE status = "done"';
+            $pickup_orders = 0;
+            $ret = $db->query($sql);
+
+            while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
+             if($row['Customer_ID']==$customer_id){
+              $pickup_orders += 1;
+             }
+            }
             $db->close();
             $user = $_SESSION['Customer'];
-            echo("<br>hello $user there are currently $orders orders in the queue");
+            if($pickup_orders==0) {echo("<br>Hello there $user are currently $orders orders in the queue");}
+            elseif($pickup_orders==1) {echo("<br>Hello there $user you have $pickup_orders order ready for pickup");}
+            elseif($pickup_orders>1) {echo("<br>Hello there $user you have $pickup_orders order's ready for pickup");}
           ?>
       
         <div class="row">
