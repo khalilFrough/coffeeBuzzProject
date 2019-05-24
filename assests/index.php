@@ -320,7 +320,7 @@
     <div class="admin__popup__content">
       <!-- the admin login form starts here -->
       <div class="register__form">
-        <form action="#" class="form">
+        <form action="adminLogin.php" class="form" method="POST">
           <!-- form heading -->
           <div class="u-margin-bottom-medium">
             <h2 class="heading-secondary">
@@ -333,6 +333,7 @@
               type="text"
               class="form__input"
               placeholder="User Name"
+              name="username"
               id="admin-username"
               required
             />
@@ -345,6 +346,7 @@
             <input
               type="password"
               class="form__input"
+              name="pword"
               placeholder="Password"
               id="admin-password"
               required

@@ -15,7 +15,7 @@
       echo "Opened database successfully\n";
    }
     $sql =<<<EOF
-   SELECT * FROM STAFF;
+   SELECT * FROM ADMIN;
 EOF;
 //established connection and retireved the customer table for examination before insertion
 $ret = $db->query($sql);
@@ -29,9 +29,8 @@ while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
 }
 
 $sql =<<<EOF
-    INSERT INTO STAFF(staff_id, user_name, password) VALUES($count,'$username','$testPword');
+    INSERT INTO ADMIN(id, user_name, password) VALUES($count,'$username','$testPword');
 EOF;
 $ret = $db->query($sql);
 $db->close();
-header("Location:admin.php");
 ?>

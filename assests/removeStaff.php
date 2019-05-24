@@ -14,22 +14,14 @@
    } else {
       echo "Opened database successfully\n";
    }
-    $sql =<<<EOF
-   SELECT * FROM STAFF;
-EOF;
 //established connection and retireved the customer table for examination before insertion
 $ret = $db->query($sql);
 
-$testPword = hash('tiger192,3',$_POST["pword"]);//encrypt password using a hash
-$username = $_POST["username"];
+$id = $_POST["staff_id"];
 //examine row array
-$count = 0;
-while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
-    $count += 1;
-}
-
+$count = 
 $sql =<<<EOF
-    INSERT INTO STAFF(staff_id, user_name, password) VALUES($count,'$username','$testPword');
+    DELETE FROM STAFF WHERE staff_id = $id;
 EOF;
 $ret = $db->query($sql);
 $db->close();
